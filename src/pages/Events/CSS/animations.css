@@ -1,0 +1,54 @@
+/* Animations */
+@keyframes glowPulse {
+    0% { text-shadow: 0 0 10px rgba(255,255,255,0.8), 0 0 20px rgba(255,255,255,0.8); }
+    50% { text-shadow: 0 0 20px rgba(255,255,255,0.4), 0 0 40px rgba(70,130,255,0.6); }
+    100% { text-shadow: 0 0 10px rgba(255,255,255,0.8), 0 0 20px rgba(255,255,255,0.8); }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(100px) scale(0.8);
+    }
+    60% {
+      transform: translateY(-20px) scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  @keyframes cardHover {
+    0% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+    100% { transform: translateY(0) rotate(0); }
+  }
+  
+  @keyframes modalEnter {
+    0% {
+      opacity: 0;
+      transform: scale(0.6) translateY(40px);
+    }
+    70% {
+      transform: scale(1.05) translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  @keyframes backgroundShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .card-enter {
+    animation: slideIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) backwards;
+  }
+  
+  .modal-animate {
+    animation: modalEnter 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }

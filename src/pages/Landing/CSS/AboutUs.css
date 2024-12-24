@@ -1,0 +1,28 @@
+.image-seq::before {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Anchor to bottom and radiate upward */
+    left: -20vw; /* Extend beyond viewport width */
+    width: 140vw; /* Make it wider than the viewport */
+    height: 12rem; /* Height large enough to radiate blur upward */
+    background: rgba(0, 0, 0, 1); /* Solid black for full opacity */
+    filter: blur(30px); /* Smooth blur effect */
+    -webkit-filter: blur(30px); /* Safari compatibility */
+    transform: translateY(60%); /* Shift blur upwards */
+    pointer-events: none; /* Allow interaction with content above */
+}
+
+.about-us::before {
+    z-index: 100;
+    content: "";
+    position: absolute;
+    bottom: 0; /* Anchor to bottom and radiate upward */
+    left: -20vw; /* Extend beyond viewport width */
+    width: 140vw; /* Make it wider than the viewport */
+    height: 12rem; /* Height large enough to radiate blur upward */
+    background: rgba(0, 0, 0, 1); /* Solid black for full opacity */
+    filter: blur(30px); /* Smooth blur effect */
+    -webkit-filter: blur(30px); /* Safari compatibility */
+    transform: translateY(60%); /* Shift blur upwards */
+    pointer-events: none; /* Allow interaction with content above */
+}

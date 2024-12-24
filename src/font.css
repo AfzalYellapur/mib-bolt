@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Editorialnew";
+    src: url("/fonts/PPEditorialNew-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Editorialnew";
+    src: url("/fonts/PPEditorialNew-Ultralight.otf") format("opentype");
+    font-weight: ultralight;
+    font-style: normal;
+  }

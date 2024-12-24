@@ -1,0 +1,54 @@
+#bottomblur::after {
+    content: "";
+    bottom: 0;
+    width: 100dvw;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.95);
+    filter: blur(24rem);
+    -webkit-filter: blur(10px);
+}
+
+#eventscroll {
+    width: 100%;
+    height: 10rem; /* Height of the blurred section */
+    position: relative; /* Relative to contain the inner content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent; /* Prevent solid background interference */
+    overflow: hidden; /* Prevents content spillover */
+}
+
+#eventscroll::before {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Anchor to bottom and radiate upward */
+    left: -20vw; /* Extend beyond viewport width */
+    width: 140vw; /* Make it wider than the viewport */
+    height: 12rem; /* Height large enough to radiate blur upward */
+    background: rgba(0, 0, 0, 1); /* Solid black for full opacity */
+    filter: blur(30px); /* Smooth blur effect */
+    -webkit-filter: blur(30px); /* Safari compatibility */
+    transform: translateY(60%); /* Shift blur upwards */
+    pointer-events: none; /* Allow interaction with content above */
+}
+
+.styled-button::after {
+    /* z-index: 10; */
+    content: "";
+    position: absolute;
+    bottom: 0; /* Anchor to bottom and radiate upward */
+    right: 0;
+    width: 9.5rem; /* Make it wider than the viewport */
+    height: 2rem; /* Height large enough to radiate blur upward */
+    background:conic-gradient(from 0deg,
+    #ff4545 0deg,
+    #00ff99 90deg,  
+    #006aff 180deg,
+    #ff0095 270deg,
+    #ff4545 360deg
+  ); /* Solid black for full opacity */
+    filter: blur(35px); /*Smooth blur effect */
+    -webkit-filter: blur(35px); /* Safari compatibility */
+    pointer-events: none; /* Allow interaction with content above */
+}

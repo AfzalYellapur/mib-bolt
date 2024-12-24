@@ -1,0 +1,20 @@
+.tunnel-video::before, .tunnel-video::after {
+    z-index: 10;
+    content: "";
+    position: absolute;
+    width: 110%;
+    height: 10rem;
+    background: rgba(0, 0, 0, 1);
+    filter: blur(30px);
+    -webkit-filter: blur(30px);   
+    pointer-events: none; /* Allow interaction with content above */
+}
+
+.tunnel-video::after {
+    transform: translate(-5%, -250%); /* Shift blur upwards */
+    /* background-color: red; */
+}
+
+.tunnel-video::before {
+    transform: translate(-2vw, -40%); /* Shift blur upwards */
+}
